@@ -18,8 +18,8 @@ const CreateBlog = ({ setBlogs, blogs, setMessage, setMessageType, clearForm }) 
     // Add user information to blog list
     submmitedBlog.user = {
       id: submmitedBlog.user,
-      name : currentUser.name ,
-      username : currentUser.username
+      name: currentUser.name,
+      username: currentUser.username
     }
 
     setBlogs(blogs.concat(submmitedBlog))
@@ -38,18 +38,18 @@ const CreateBlog = ({ setBlogs, blogs, setMessage, setMessageType, clearForm }) 
 
   }
 
-  return(
+  return (
     <>
       <h2>create new</h2>
       <form onSubmit={handeSubmit} >
         <div>
-                title  <input value={title} id='title' onChange={({ target }) => setTitle(target.value) } />
+          title  <input value={title} id='title' onChange={({ target }) => setTitle(target.value)} />
         </div>
         <div>
-                author <input value={author} id='author' onChange={({ target }) => setAuthor(target.value) } />
+          author <input value={author} id='author' onChange={({ target }) => setAuthor(target.value)} />
         </div>
         <div>
-                url <input value={url} id='url' onChange={({ target }) => setUrl(target.value) } />
+          url <input value={url} id='url' onChange={({ target }) => setUrl(target.value)} />
         </div>
         <br />
         <button id='blogSubmit' type="submit">save</button>
